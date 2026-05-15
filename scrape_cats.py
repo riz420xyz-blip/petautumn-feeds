@@ -14,7 +14,7 @@ import os
 import re
 import json
 
-SOURCE_RSS = "https://www.catster.com/feed"
+SOURCE_RSS = "https://www.hepper.com/feed/"
 OUTPUT_FILE = "feeds/petautumn_cats.xml"
 HASH_FILE = "feeds/.cats_seen.json"
 FEED_TITLE = "PetAutumn - Cats"
