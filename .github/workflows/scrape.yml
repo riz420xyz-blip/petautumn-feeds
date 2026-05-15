@@ -26,6 +26,9 @@ jobs:
       - name: Run dog scraper
         run: python scrape_dogs.py
 
+      - name: Run cat scraper
+        run: python scrape_cats.py
+
       - name: Commit and push feeds
         run: |
           git config user.name "github-actions[bot]"
