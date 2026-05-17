@@ -196,7 +196,7 @@ def main():
     if os.path.exists(OUTPUT_FILE):
         try:
             tree = ET.parse(OUTPUT_FILE)
-            root = ET.getroot()
+            root = tree.getroot()
             channel = root.find("channel")
             ns = {"content": "http://purl.org/rss/1.0/modules/content/",
                   "media": "http://search.yahoo.com/mrss/"}
