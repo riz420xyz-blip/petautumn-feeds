@@ -1,34 +1,28 @@
 name: Scrape Pet Feeds
-
 on:
   schedule:
     - cron: "0 */6 * * *"
   workflow_dispatch:
-
 permissions:
   contents: write
-
 jobs:
   scrape:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-
       - name: Install dependencies
         run: pip install requests
-
       - name: Run dog scraper
         run: python scrape_dogs.py
-
       - name: Run cat scraper
         run: python scrape_cats.py
-
+      - name: Run pet care scraper
+        run: python scrape_petcare.py
       - name: Commit and push feeds
         run: |
           git config user.name "github-actions[bot]"
